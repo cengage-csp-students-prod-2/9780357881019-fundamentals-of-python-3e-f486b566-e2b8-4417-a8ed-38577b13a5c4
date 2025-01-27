@@ -9,6 +9,7 @@ it will then calculate the surface area. The program will display the surface ar
 """
 def cube_surface_area(side_length):
     return 6 * side_length ** 2
+    
 side_length = float(input("Enter the side length of the cube: "))
 surface_area = cube_surface_area(side_length)# Write your program here
 print("The surface area of the cube is:", surface_area)
