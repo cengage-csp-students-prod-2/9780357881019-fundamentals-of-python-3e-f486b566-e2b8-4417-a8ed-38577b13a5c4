@@ -1,0 +1,32 @@
+
+Status: FAILED!
+Check: 1
+Test: Print your name.
+Reason: Unable to find '['Your Name']' in the program's output.
+.
+Error : AssertionError - 
+Timestamp: 2025-01-27 17:46:34.903305
+
+Status: FAILED!
+Check: 2
+Test: Print your address.
+Reason: Unable to find '['An address']' in the program's output.
+.
+Error : AssertionError - 
+Timestamp: 2025-01-27 17:46:34.921135
+
+Status: FAILED!
+Check: 3
+Test: Print your phone number.
+Reason: Unable to find '['123-4567']' in the program's output.
+.
+Error : AssertionError - 
+Timestamp: 2025-01-27 17:46:34.938677
+
+Status: FAILED!
+Check: 4
+Test: There are three lines of output
+Reason: Unable to find '['Three lines of output']' in the program's output.
+.
+Error : AssertionError - 
+Timestamp: 2025-01-27 17:46:34.959756
