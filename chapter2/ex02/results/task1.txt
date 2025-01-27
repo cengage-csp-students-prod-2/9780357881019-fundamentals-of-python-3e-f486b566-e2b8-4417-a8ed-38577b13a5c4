@@ -1,0 +1,27 @@
+
+Status: FAILED!
+Check: 1
+Test: Outputs '294 square units' when input is 7
+Reason: Unable to find '['294 square units']' in the program's output.
+Enter the length of an edge: The surface area of the cube is: 294
+.
+Error : AssertionError - 
+Timestamp: 2025-01-27 22:19:55.411936
+
+Status: FAILED!
+Check: 2
+Test: Outputs '54 square units' when input is 3
+Reason: Unable to find '['54 square units']' in the program's output.
+Enter the length of an edge: The surface area of the cube is: 54
+.
+Error : AssertionError - 
+Timestamp: 2025-01-27 22:19:55.430560
+
+Status: FAILED!
+Check: 3
+Test: Outputs '0 square units' when input is 0
+Reason: Unable to find '['0 square units']' in the program's output.
+Enter the length of an edge: The surface area of the cube is: 0
+.
+Error : AssertionError - Unable to find 0 square units in the program's output.
+Timestamp: 2025-01-27 22:19:55.449340
