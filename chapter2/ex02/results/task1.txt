@@ -6,7 +6,7 @@ Reason: Unable to find '['294 square units']' in the program's output.
 Enter the side length of the cube: The surface area of the cube is: 294.0
 .
 Error : AssertionError - 
-Timestamp: 2025-01-27 22:35:30.149344
+Timestamp: 2025-01-27 22:38:11.442339
 
 Status: FAILED!
 Check: 2
@@ -15,7 +15,7 @@ Reason: Unable to find '['54 square units']' in the program's output.
 Enter the side length of the cube: The surface area of the cube is: 54.0
 .
 Error : AssertionError - 
-Timestamp: 2025-01-27 22:35:30.166556
+Timestamp: 2025-01-27 22:38:11.459639
 
 Status: FAILED!
 Check: 3
@@ -24,4 +24,4 @@ Reason: Unable to find '['0 square units']' in the program's output.
 Enter the side length of the cube: The surface area of the cube is: 0.0
 .
 Error : AssertionError - Unable to find 0 square units in the program's output.
-Timestamp: 2025-01-27 22:35:30.183986
+Timestamp: 2025-01-27 22:38:11.476928
