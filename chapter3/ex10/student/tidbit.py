@@ -22,11 +22,16 @@ def payment_schedule(purchase_price):
     while total_balance > 0:
         interest_owed = total_balance * (annual_interest_rate / 12)
         principal_owed = monthly_payment - interest_owed
+        
+        # Adjust principal_owed if it exceeds total_balance
         if principal_owed > total_balance:
             principal_owed = total_balance
-            monthly_payment = interest_owed + principal_owed
         
         remaining_balance = total_balance - principal_owed
+        
+        # Calculate the actual payment for the last month
+        if remaining_balance < 0:
+            monthly_payment = interest_owed + principal_owed
         
         print(f"{month:<10}{total_balance:<20.2f}{interest_owed:<20.2f}{principal_owed:<20.2f}{monthly_payment:<20.2f}{remaining_balance:<20.2f}")
         
@@ -34,4 +39,4 @@ def payment_schedule(purchase_price):
         month += 1
 
 purchase_price = float(input("Enter the purchase price: "))
-payment_schedule(purchase_price)# Write your program here
+payment_schedule(purchase_price)
