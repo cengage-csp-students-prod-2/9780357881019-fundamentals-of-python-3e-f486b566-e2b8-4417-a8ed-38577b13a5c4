@@ -7,30 +7,27 @@ given credit plan conditions. The user will input the purchase price. The
 program will display a table with a payment schedule for the length of
 the loan."
 """
-def payment_schedule(purchase_price):
-    down_payment = purchase_price * 0.10
-    loan_amount = purchase_price - down_payment
+def generate_payment_schedule(purchase_price):
+    down_payment_percentage = 0.10
     annual_interest_rate = 0.12
-    monthly_payment = purchase_price * 0.05
+    monthly_payment_percentage = 0.05
+    down_payment = purchase_price * down_payment_percentage
+    loan_amount = purchase_price - down_payment
+    monthly_payment = purchase_price * monthly_payment_percentage
+    balance = loan_amount
+    print(f"{'Month':<6}{'Balance Owed':<15}{'Interest Owed':<15}{'Principal Owed':<20}{'Payment':<10}{'Remaining Balance':<20}")
     month = 1
-
-    print(f"{'Month':<10}{'Total Balance':<20}{'Interest Owed':<20}{'Principal Owed':<20}{'Payment':<20}{'Remaining Balance':<20}")
-    
-    total_balance = loan_amount
-
-    while total_balance > 0:
-        interest_owed = total_balance * (annual_interest_rate / 12)
+    while balance > 0:
+        interest_owed = balance * annual_interest_rate / 12
         principal_owed = monthly_payment - interest_owed
-        if principal_owed > total_balance:
-            principal_owed = total_balance
+        if principal_owed > balance:
+            principal_owed = balance
             monthly_payment = interest_owed + principal_owed
-        
-        remaining_balance = total_balance - principal_owed
-        
-        print(f"{month:<10}{total_balance:<20.2f}{interest_owed:<20.2f}{principal_owed:<20.2f}{monthly_payment:<20.2f}{remaining_balance:<20.2f}")
-        
-        total_balance = remaining_balance
+        balance -= principal_owed
+        print(f"{month:<6}{balance + principal_owed:<15.2f}{interest_owed:<15.2f}{principal_owed:<20.2f}{monthly_payment:<10.2f}{max(0, balance):<20.2f}")
         month += 1
-
-purchase_price = float(input("Enter the purchase price: "))
-payment_schedule(purchase_price)# Write your program here
+def main():
+    purchase_price = float(input("Enter the purchase price: $"))
+    generate_payment_schedule(purchase_price)
+if __name__ == "__main__":
+    main()
