@@ -42,7 +42,6 @@ def print_payment_schedule(purchase_price):
         # If the balance is less than the monthly payment, adjust the principal payment
         if principal_owed > balance:
             principal_owed = balance
-            monthly_payment = interest_owed + principal_owed
         
         # Calculate remaining balance after the payment
         balance -= principal_owed
