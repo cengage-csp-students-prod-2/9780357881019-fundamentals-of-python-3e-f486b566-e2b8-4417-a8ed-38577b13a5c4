@@ -8,33 +8,37 @@ program will display a table with a payment schedule for the length of
 the loan."
 """
 
-# Payment Schedule Program
+# Input
+fltPurchasePrice = float(input("Enter the purchase price: "))
 
-def payment_schedule(purchase_price):
-    down_payment = purchase_price * 0.10
-    loan_amount = purchase_price - down_payment
-    annual_interest_rate = 0.12
-    monthly_payment = (loan_amount * annual_interest_rate / 12) + (loan_amount / (12 * 5))  # Example: 5-year loan
+# Constants
+ANNUAL_RATE = 0.12
+MONTHLY_RATE = ANNUAL_RATE / 12
+DOWNPAYMENT_RATE = 0.10
+TABLEFORMATSTRING = "{:<5}{:<18.2f}{:<18.2f}{:<18.2f}{:<18.2f}{:<18.2f}"
 
-    print(f"{'Month':<10}{'Total Balance':<20}{'Interest Owed':<20}{'Principal Owed':<20}{'Payment':<20}{'Remaining Balance':<20}")
-    
-    total_balance = loan_amount
-    month = 1
+# Initialize
+monthlyPayment = 0.05 * fltPurchasePrice
+month = 1
+balance = fltPurchasePrice - (fltPurchasePrice * DOWNPAYMENT_RATE)
 
-    while total_balance > 0:
-        interest_owed = total_balance * (annual_interest_rate / 12)
-        principal_owed = monthly_payment - interest_owed
-        
-        if principal_owed > total_balance:
-            principal_owed = total_balance
-        
-        remaining_balance = total_balance - principal_owed
-        
-        print(f"{month:<10}{total_balance:<20.2f}{interest_owed:<20.2f}{principal_owed:<20.2f}{monthly_payment:<20.2f}{remaining_balance:<20.2f}")
-        
-        total_balance = remaining_balance
-        month += 1
+# Output header
+print(f"{'Month':<5}{'Starting Balance':<18}{'Interest to Pay':<18}{'Principal to Pay':<18}{'Payment':<18}{'Ending Balance':<18}")
 
-# Example usage
-purchase_price = float(input("Enter the purchase price: "))
-payment_schedule(purchase_price)
+# While loop to display payment details
+while balance > 0:
+    if monthlyPayment > balance:
+        monthlyPayment = balance
+        interest = 0
+    else:
+        interest = balance * MONTHLY_RATE
+
+    principal = monthlyPayment - interest
+    remaining = balance - monthlyPayment
+
+    # Display payment details
+    print(TABLEFORMATSTRING.format(month, balance, interest, principal, monthlyPayment, remaining))
+
+    # Update balance and increment month
+    balance = remaining
+    month += 1
