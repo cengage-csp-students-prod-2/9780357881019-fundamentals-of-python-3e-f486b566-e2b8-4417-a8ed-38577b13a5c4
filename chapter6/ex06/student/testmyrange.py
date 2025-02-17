@@ -26,7 +26,6 @@ def myRange(start, stop=None, step=1):
 
     return result
 
-# Test cases
 if __name__ == "__main__":
     print(myRange(5))          # [0, 1, 2, 3, 4]
     print(myRange(1, 5))       # [1, 2, 3, 4]
@@ -35,4 +34,4 @@ if __name__ == "__main__":
     print(myRange(10, 1, -2))  # [10, 8, 6, 4, 2]
     print(myRange(1, 10, 0))   # []
     print(myRange(10, 1, 0))   # []
-    print(myRange(1, 10, -1))  # []# Write your code here
+    print(myRange(1, 10, -1))  # []
