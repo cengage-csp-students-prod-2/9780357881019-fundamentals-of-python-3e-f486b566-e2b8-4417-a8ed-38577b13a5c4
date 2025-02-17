@@ -12,11 +12,11 @@ def print_sequence(sequence):
         print_sequence(sequence[1:])
 
 if __name__ == "__main__":
-    test_list = [1, 2, 3, 4, 5]
+    test_list = [1, 2, 3, 4, 5, 6]
     print("Testing with a list:")
     print_sequence(test_list)
 
-    test_string = "Hello"
+    test_string = "Ashley"
     print("\nTesting with a string:")
     print_sequence(test_string)
 
