@@ -5,7 +5,9 @@ Assignment: Module 07 Practice Exercise 10-8
 """
 
 class Card:
-    def __init__(self):
+    def __init__(self, rank, suit):
+        self.rank = rank
+        self.suit = suit
         self.faceup = False
 
     def turn(self):
