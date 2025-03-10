@@ -4,11 +4,11 @@ Check: 1
 Test: The `Card` class contains the `faceup` attribute.
 Reason: The `Card` class does not contain the `faceup` attribute.
 Error : AssertionError - Assertion failed: The `Card` class does not contain the `faceup` attribute.
-Timestamp: 2025-03-10 01:06:34.740745
+Timestamp: 2025-03-10 01:08:17.981535
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
 Error : AttributeError - 'Card' object has no attribute 'faceup'
-Timestamp: 2025-03-10 01:06:34.740879
+Timestamp: 2025-03-10 01:08:17.981695
