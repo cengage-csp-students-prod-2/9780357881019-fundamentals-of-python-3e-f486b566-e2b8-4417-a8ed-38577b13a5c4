@@ -1,22 +1,28 @@
 """
-File: cards.py
+Author: Ashley Francis
+Date written: 03/03/2025
+Assignment: Add `faceup` instance variable to the `Card` class.
+Add `turn` method to `Card` class.
+"""
 
-Module for playing cards, with classes Card and Deck
-""" 
 import random
 
 class Card(object):
     """ A card object with a suit and rank."""
 
     RANKS = tuple(range(1, 14))
-
     SUITS = ("Spades", "Diamonds", "Hearts", "Clubs")
 
     def __init__(self, rank, suit):
         """Creates a card with the given rank and suit."""
         self.rank = rank
         self.suit = suit
-        
+        self.faceup = False
+
+    def turn(self):
+        """Turns the card face up or down."""
+        self.faceup = not self.faceup
+
     def __str__(self):
         """Returns the string representation of a card."""
         if self.rank == 1:
@@ -30,8 +36,6 @@ class Card(object):
         else:
             rank = self.rank
         return str(rank) + " of " + self.suit
-
-import random
 
 class Deck(object):
     """ A deck containing 52 cards."""
@@ -51,20 +55,20 @@ class Deck(object):
     def deal(self):
         """Removes and returns the top card or None 
         if the deck is empty."""
-        if len(self) == 0:
-           return None
+        if len(self.cards) == 0:
+            return None
         else:
-           return self.cards.pop(0)
+            return self.cards.pop(0)
 
     def __len__(self):
-       """Returns the number of cards left in the deck."""
-       return len(self.cards)
+        """Returns the number of cards left in the deck."""
+        return len(self.cards)
 
     def __str__(self): 
         """Returns the string representation of a deck."""
         result = ''
         for c in self.cards:
-            result = self.result + str(c) + '\n'
+            result += str(c) + '\n'
         return result
 
 def main():
@@ -81,4 +85,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
