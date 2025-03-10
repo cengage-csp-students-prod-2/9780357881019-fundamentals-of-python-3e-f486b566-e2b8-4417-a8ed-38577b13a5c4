@@ -1,14 +1,12 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
 Test: The `Card` class contains the `faceup` attribute.
-Reason: The `Card` class does not contain the `faceup` attribute.
-Error : AssertionError - Assertion failed: The `Card` class does not contain the `faceup` attribute.
-Timestamp: 2025-03-10 01:08:17.981535
+Reason: None
+Timestamp: 2025-03-10 01:13:51.321071
 
-Status: FAILED!
+Status: PASSED!
 Check: 2
-Test: 
-Reason: 
-Error : AttributeError - 'Card' object has no attribute 'faceup'
-Timestamp: 2025-03-10 01:08:17.981695
+Test: The `faceup` attribute defaults to `False`.
+Reason: None
+Timestamp: 2025-03-10 01:13:51.321215

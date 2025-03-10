@@ -1,14 +1,12 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
 Test: The `Card` class contains the `turn` method
-Reason: The `Card` class does not contain the `turn` method.
-Error : AssertionError - Assertion failed: The `Card` class does not contain the `turn` method.
-Timestamp: 2025-03-10 01:08:17.981777
+Reason: None
+Timestamp: 2025-03-10 01:13:51.321310
 
-Status: FAILED!
+Status: PASSED!
 Check: 2
-Test: 
-Reason: 
-Error : AttributeError - 'Card' object has no attribute 'turn'
-Timestamp: 2025-03-10 01:08:17.981872
+Test: The `turn` method turns the card over.
+Reason: None
+Timestamp: 2025-03-10 01:13:51.321407
